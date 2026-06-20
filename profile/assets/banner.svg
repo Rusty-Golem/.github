@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" font-family="Verdana, Geneva, 'DejaVu Sans', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#23262f"/>
+      <stop offset="1" stop-color="#14161b"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#475063"/>
+      <stop offset="1" stop-color="#2a2f3a"/>
+    </linearGradient>
+    <radialGradient id="eye" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0" stop-color="#d6ffe9"/>
+      <stop offset="0.5" stop-color="#5fd08a"/>
+      <stop offset="1" stop-color="#2f9a60"/>
+    </radialGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" rx="30" fill="url(#bg)"/>
+
+  <!-- golem block -->
+  <g>
+    <rect x="92" y="92" width="176" height="176" rx="28" fill="url(#stone)" stroke="#0e1118" stroke-width="3"/>
+    <rect x="108" y="106" width="144" height="20" rx="10" fill="#ffffff" opacity="0.07"/>
+    <!-- moss patches -->
+    <circle cx="120" cy="116" r="15" fill="#5fd08a" opacity="0.45"/>
+    <circle cx="244" cy="124" r="10" fill="#5fd08a" opacity="0.38"/>
+    <circle cx="106" cy="238" r="9" fill="#5fd08a" opacity="0.32"/>
+    <!-- cracks -->
+    <path d="M150 152 l15 22 -9 15" fill="none" stroke="#0e1118" stroke-width="2.5" opacity="0.5"/>
+    <path d="M216 210 l-12 -17" fill="none" stroke="#0e1118" stroke-width="2.5" opacity="0.5"/>
+    <!-- eyes -->
+    <g filter="url(#glow)">
+      <rect x="132" y="160" width="40" height="30" rx="9" fill="url(#eye)"/>
+      <rect x="188" y="160" width="40" height="30" rx="9" fill="url(#eye)"/>
+    </g>
+    <!-- mouth -->
+    <rect x="150" y="222" width="60" height="9" rx="4.5" fill="#0e1118" opacity="0.55"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="318" y="180" font-size="86" font-weight="800" letter-spacing="2">
+    <tspan fill="#e0a868">RUSTY </tspan><tspan fill="#f2f0ea">GOLEM</tspan>
+  </text>
+  <text x="322" y="234" font-size="29" fill="#a7adba" letter-spacing="0.4">Smart Minecraft bots, built for people.</text>
+</svg>
